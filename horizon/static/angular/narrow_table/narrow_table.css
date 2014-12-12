@@ -16,11 +16,19 @@
   .narrow-table .actions-header th {
     padding: 10px 0;
     text-align: right; }
+    .narrow-table .actions-header th .form-group {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle; }
+      .narrow-table .actions-header th .form-group .input-group input, .narrow-table .actions-header th .form-group .input-group span {
+        width: auto; }
   .narrow-table th {
     background-color: #ffffff;
     box-sizing: content-box;
     padding: 8px;
     white-space: nowrap; }
+  .narrow-table tbody .row-selected {
+    background-color: #edf6fc; }
   .narrow-table tbody td {
     border-top: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc;
@@ -35,12 +43,17 @@
 
 .expand-table {
   border-spacing: 0; }
-  .expand-table tbody .summary-only td:first-child:before,
-  .expand-table tbody .multi-select-col + td:before {
-    content: "\f054";
+  .expand-table tbody .summary-only td:first-child,
+  .expand-table tbody .multi-select-col + td {
+    box-sizing: content-box;
     color: #999999;
-    font: normal normal 0.8em FontAwesome;
-    margin-right: 0.5em; }
+    padding: 0 0 0 6px;
+    min-width: 15px;
+    max-width: 15px;
+    width: 15px;
+    font-size: 0.9em;
+    text-align: center;
+    vertical-align: middle; }
   .expand-table tbody tr:nth-child(3n+2) {
     display: none; }
     .expand-table tbody tr:nth-child(3n+2).expanded {
@@ -53,9 +66,11 @@
   .expand-table tbody tr:nth-child(3n) td {
     border: none;
     padding: 2px; }
+  .expand-table .fa-chevron-right, .expand-table .fa-chevron-down {
+    cursor: pointer; }
 
 .action-table {
-  padding-right: 200px; }
+  padding-right: 214px; }
   .action-table .actions-header {
     height: 60px; }
     .action-table .actions-header th:last-child {
