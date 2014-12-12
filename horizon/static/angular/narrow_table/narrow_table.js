@@ -6,24 +6,20 @@ $(document).ready(function() {
     lastWidth = $(window).width();
   });
 
-  $(".expand-table").on("click", ".summary-only td:first-child, .multi-select-col + td", function(e) {
-    var point = e.clientX;
-    var leftBound = e.target.offsetLeft + 15;
-    var rightBound = e.target.offsetLeft + 30;
+  $(".expand-table").on("click", ".fa-chevron-right, .fa-chevron-down", function(e) {
+    var icon = $(this);
+    var summaryRow = icon.closest("tr");
+    var detailRow = summaryRow.next();
 
-    if (point > leftBound && point < rightBound) {
-      var summaryRow = $(this).parent();
-      var detailRow = summaryRow.next();
+    icon.toggleClass("fa-chevron-down");
+    detailRow.toggleClass("expanded");
 
-      detailRow.toggleClass("expanded");
-
-      if (detailRow.closest("table").hasClass("action-table")) {
-        if (detailRow.hasClass("expanded")) {
-          var actionColHeight = detailRow.offset().top + detailRow.height() - summaryRow.offset().top - 18;
-          summaryRow.find("td:last-child").css("height", actionColHeight);
-        } else {
-          summaryRow.find("td:last-child").css("height", "inherit");
-        }
+    if (detailRow.closest("table").hasClass("action-table")) {
+      if (detailRow.hasClass("expanded")) {
+        var actionColHeight = detailRow.offset().top + detailRow.height() - summaryRow.offset().top - 18;
+        summaryRow.find("td:last-child").css("height", actionColHeight);
+      } else {
+        summaryRow.find("td:last-child").css("height", "inherit");
       }
     }
   });

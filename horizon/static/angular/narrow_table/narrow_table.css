@@ -35,12 +35,16 @@
 
 .expand-table {
   border-spacing: 0; }
-  .expand-table tbody .summary-only td:first-child:before,
-  .expand-table tbody .multi-select-col + td:before {
-    content: "\f054";
+  .expand-table tbody .summary-only td:first-child,
+  .expand-table tbody .multi-select-col + td {
+    box-sizing: content-box;
     color: #999999;
-    font: normal normal 0.8em FontAwesome;
-    margin-right: 0.5em; }
+    padding: 0 0 0 6px;
+    min-width: 15px;
+    max-width: 15px;
+    width: 15px;
+    font-size: 0.9em;
+    text-align: center; }
   .expand-table tbody tr:nth-child(3n+2) {
     display: none; }
     .expand-table tbody tr:nth-child(3n+2).expanded {
