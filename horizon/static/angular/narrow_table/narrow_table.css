@@ -19,7 +19,8 @@
   .narrow-table th {
     background-color: #ffffff;
     box-sizing: content-box;
-    padding: 8px; }
+    padding: 8px;
+    white-space: nowrap; }
   .narrow-table tbody td {
     border-top: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc;

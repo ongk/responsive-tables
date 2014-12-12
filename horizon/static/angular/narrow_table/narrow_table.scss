@@ -30,6 +30,7 @@ $table-footer-topspace: 10px;
     background-color: #ffffff;
     box-sizing: content-box;
     padding: $table-cell-padding;
+    white-space: nowrap;
   }
 
   tbody td {
