@@ -52,8 +52,7 @@
     max-width: 15px;
     width: 15px;
     font-size: 0.9em;
-    text-align: center;
-    vertical-align: middle; }
+    text-align: center; }
   .expand-table tbody tr:nth-child(3n+2) {
     display: none; }
     .expand-table tbody tr:nth-child(3n+2).expanded {
