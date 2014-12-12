@@ -150,9 +150,9 @@ $table-footer-topspace: 10px;
         width: 30px;
       }
 
-      &:nth-last-child(2) {
-        padding-right: 30px;
-      }
+      // &:nth-last-child(2) {
+      //   padding-right: 30px;
+      // }
 
       &:last-child {
         background-color: #ffffff;
@@ -191,9 +191,9 @@ $table-footer-topspace: 10px;
     width: 200px;
   }
 
-  td:nth-last-child(2) {
-    padding-right: 20px;
-  }
+  // td:nth-last-child(2) {
+  //   padding-right: 20px;
+  // }
 
   tfoot td:last-child {
     max-width: 100%;

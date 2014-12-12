@@ -88,8 +88,6 @@
       min-width: 30px;
       padding: 2px 0;
       width: 30px; }
-    .action-table tbody tr td:nth-last-child(2) {
-      padding-right: 30px; }
     .action-table tbody tr td:last-child {
       background-color: #ffffff;
       border-left: 1px solid #cccccc; }
@@ -108,8 +106,6 @@
     position: absolute;
     right: 0;
     width: 200px; }
-  .action-table td:nth-last-child(2) {
-    padding-right: 20px; }
   .action-table tfoot td:last-child {
     max-width: 100%;
     min-width: 100%;
