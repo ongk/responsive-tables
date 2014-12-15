@@ -51,7 +51,13 @@ $table-footer-topspace: 10px;
       background-color: #edf6fc;
     }
 
+    tr:hover td {
+      background: #edf6fc;
+    }
+
     td {
+      box-sizing: content-box;
+      height: 26px;
       border-top: 1px solid $table-border-color;
       border-bottom: 1px solid $table-border-color;
       padding: $table-cell-padding;
@@ -96,19 +102,23 @@ $table-footer-topspace: 10px;
         display: table-row;
 
         td {
+          background: #ffffff;
           white-space: normal;
         }
       }
 
       td {
+        height: inherit;
         border-top: none;
         padding: $table-cell-padding 20px;
       }
     }
 
     tr:nth-child(3n) td {
+      height: 4px;
       border: none;
-      padding: 2px;
+      padding: 0;
+      background: #ffffff;
     }
   }
 
@@ -118,7 +128,6 @@ $table-footer-topspace: 10px;
 }
 
 .action-table {
-  padding-right: 214px;
 
   .actions-header {
     height: 60px;
@@ -140,8 +149,6 @@ $table-footer-topspace: 10px;
 
   tbody tr {
     td {
-      box-sizing: content-box;
-      height: 30px;
 
       &:first-child {
         max-width: 30px;
@@ -150,13 +157,13 @@ $table-footer-topspace: 10px;
         width: 30px;
       }
 
-      // &:nth-last-child(2) {
-      //   padding-right: 30px;
-      // }
-
       &:last-child {
         background-color: #ffffff;
         border-left: 1px solid $table-border-color;
+
+        .btn-xs {
+          padding: 3px 6px;
+        }
       }
     }
   }
@@ -184,16 +191,9 @@ $table-footer-topspace: 10px;
   }
 
   th:last-child, td:last-child {
-    max-width: 200px;
-    min-width: 200px;
     position: absolute;
     right: 0;
-    width: 200px;
   }
-
-  // td:nth-last-child(2) {
-  //   padding-right: 20px;
-  // }
 
   tfoot td:last-child {
     max-width: 100%;
