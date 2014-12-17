@@ -7,6 +7,8 @@
 
 .responsive-scrollable {
   overflow-x: auto; }
+  .responsive-scrollable .scrollbar-spacer {
+    height: 35px; }
 
 .narrow-table {
   border-collapse: separate;

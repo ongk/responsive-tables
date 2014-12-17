@@ -13,6 +13,10 @@ $table-footer-topspace: 10px;
 
 .responsive-scrollable {
   overflow-x: auto;
+
+  .scrollbar-spacer {
+    height: 35px;
+  }
 }
 
 .narrow-table {
@@ -200,7 +204,6 @@ $table-footer-topspace: 10px;
     min-width: 100%;
     width: 100%;
   }
-
 }
 
 
