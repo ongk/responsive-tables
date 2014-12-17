@@ -53,12 +53,13 @@
   .expand-table tbody .multi-select-col + td {
     box-sizing: content-box;
     color: #999999;
-    padding: 0 0 0 6px;
+    padding: 2px 0 0 4px;
     min-width: 15px;
     max-width: 15px;
     width: 15px;
     font-size: 0.9em;
-    text-align: center; }
+    text-align: center;
+    line-height: 14px; }
   .expand-table tbody tr:nth-child(3n+2) {
     display: none; }
     .expand-table tbody tr:nth-child(3n+2).expanded {
@@ -85,9 +86,12 @@
     min-width: 100%;
     width: 100%; }
 .action-table .multi-select-col {
+  line-height: 12px;
   text-align: center; }
   .action-table .multi-select-col + td {
     border-left: 1px solid #cccccc; }
+  .action-table .multi-select-col input[type=checkbox] {
+    margin: 0; }
 .action-table tbody tr td:first-child {
   max-width: 30px;
   min-width: 30px;
