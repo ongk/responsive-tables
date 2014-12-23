@@ -12,12 +12,12 @@ $(document).ready(function() {
     $(".action-table thead tr th:last-child").width(actionColWidth);
   };
 
-  $(".expand-table").on("click", ".fa-chevron-right, .fa-chevron-down", function(e) {
+  $(".expand-table").on("click", ".fa-plus-square-o, .fa-minus-square-o", function(e) {
     var icon = $(this);
     var summaryRow = icon.closest("tr");
     var detailRow = summaryRow.next();
 
-    icon.toggleClass("fa-chevron-down");
+    icon.toggleClass("fa-plus-square-o").toggleClass("fa-minus-square-o");
     detailRow.toggleClass("expanded");
 
     if (detailRow.closest("table").hasClass("action-table")) {
@@ -30,7 +30,7 @@ $(document).ready(function() {
     }
   });
 
-  $(".action-table th.multi-select-col input:checkbox").on("click", function() {
+  $("th.multi-select-col input:checkbox").on("click", function() {
     var isChecked = $(this).is(":checked");
     if (isChecked) {
       $(".multi-select-col").closest("tr").addClass("row-selected").find("input:checkbox").attr("checked", "checked");
@@ -39,13 +39,13 @@ $(document).ready(function() {
     }
   });
 
-  $(".action-table td.multi-select-col input:checkbox").on("click", function() {
+  $("td.multi-select-col input:checkbox").on("click", function() {
     var isChecked = $(this).is(":checked");
     if (isChecked) {
       $(this).closest("tr").addClass("row-selected");
     } else {
       $(this).closest("tr").removeClass("row-selected");
-      $(".action-table th.multi-select-col input:checkbox").removeAttr("checked");
+      $("th.multi-select-col input:checkbox").removeAttr("checked");
     }
   });
 

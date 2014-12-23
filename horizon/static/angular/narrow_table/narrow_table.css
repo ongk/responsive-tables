@@ -16,7 +16,7 @@
   text-align: left;
   width: 100%; }
   .narrow-table .actions-header th {
-    padding: 10px 0;
+    padding: 10px;
     text-align: right; }
     .narrow-table .actions-header th .form-group {
       display: inline-block;
@@ -52,12 +52,10 @@
   .expand-table tbody .summary-only td:first-child,
   .expand-table tbody .multi-select-col + td {
     box-sizing: content-box;
-    color: #999999;
     padding: 2px 0 0 4px;
     min-width: 15px;
     max-width: 15px;
     width: 15px;
-    font-size: 0.9em;
     text-align: center;
     line-height: 14px; }
   .expand-table tbody tr:nth-child(3n+2) {
@@ -76,27 +74,32 @@
     border: none;
     padding: 0;
     background: #ffffff; }
-  .expand-table .fa-chevron-right, .expand-table .fa-chevron-down {
+  .expand-table .fa-plus-square-o, .expand-table .fa-minus-square-o {
     cursor: pointer; }
 
-.action-table .actions-header {
+.actions-header {
   height: 60px; }
-  .action-table .actions-header th:last-child {
+  .actions-header th:last-child {
     max-width: 100%;
     min-width: 100%;
-    width: 100%; }
-.action-table .multi-select-col {
+    width: 100%;
+    position: absolute;
+    right: 0; }
+
+.select-table .multi-select-col {
+  box-sizing: content-box;
   line-height: 12px;
   text-align: center; }
-  .action-table .multi-select-col + td {
+  .select-table .multi-select-col + td {
     border-left: 1px solid #cccccc; }
-  .action-table .multi-select-col input[type=checkbox] {
+  .select-table .multi-select-col input[type=checkbox] {
     margin: 0; }
-.action-table tbody tr td:first-child {
+.select-table tbody tr td:first-child {
   max-width: 30px;
   min-width: 30px;
   padding: 2px 0;
   width: 30px; }
+
 .action-table tbody tr td:last-child {
   background-color: #ffffff;
   border-left: 1px solid #cccccc; }
@@ -118,5 +121,8 @@
   max-width: 100%;
   min-width: 100%;
   width: 100%; }
+
+.select-table .actions-header th:last-child, .action-table .actions-header th:last-child {
+  padding: 10px 0; }
 
 /*# sourceMappingURL=narrow_table.css.map */

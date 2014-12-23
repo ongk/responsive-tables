@@ -26,7 +26,7 @@ $table-footer-topspace: 10px;
   width: 100%;
 
   .actions-header th {
-    padding: 10px 0;
+    padding: 10px;
     text-align: right;
 
     .form-group {
@@ -90,12 +90,10 @@ $table-footer-topspace: 10px;
     .summary-only td:first-child,
     .multi-select-col + td {
       box-sizing: content-box;
-      color: #999999;
       padding: 2px 0 0 4px;
       min-width: 15px;
       max-width: 15px;
       width: 15px;
-      font-size: 0.9em;
       text-align: center;
       line-height: 14px;
     }
@@ -127,24 +125,27 @@ $table-footer-topspace: 10px;
     }
   }
 
-  .fa-chevron-right, .fa-chevron-down {
+  .fa-plus-square-o, .fa-minus-square-o {
     cursor: pointer;
   }
 }
 
-.action-table {
+.actions-header {
+  height: 60px;
 
-  .actions-header {
-    height: 60px;
-
-    th:last-child {
-      max-width: 100%;
-      min-width: 100%;
-      width: 100%;
-    }
+  th:last-child {
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
   }
+}
+
+.select-table {
 
   .multi-select-col {
+    box-sizing: content-box;
     line-height: 12px;
     text-align: center;
 
@@ -157,23 +158,24 @@ $table-footer-topspace: 10px;
     }
   }
 
-  tbody tr {
-    td {
+  tbody tr td:first-child {
+    max-width: 30px;
+    min-width: 30px;
+    padding: 2px 0;
+    width: 30px;
+  }
+}
 
-      &:first-child {
-        max-width: 30px;
-        min-width: 30px;
-        padding: 2px 0;
-        width: 30px;
-      }
+.action-table {
 
-      &:last-child {
-        background-color: #ffffff;
-        border-left: 1px solid $table-border-color;
+  tbody tr td {
 
-        .btn-xs {
-          padding: 3px 6px;
-        }
+    &:last-child {
+      background-color: #ffffff;
+      border-left: 1px solid $table-border-color;
+
+      .btn-xs {
+        padding: 3px 6px;
       }
     }
   }
@@ -193,10 +195,8 @@ $table-footer-topspace: 10px;
       border-left: 1px solid $table-border-color;
     }
 
-    &:nth-child(3n+2) {
-      td:last-child {
-        display: none;
-      }
+    &:nth-child(3n+2) td:last-child {
+      display: none;
     }
   }
 
@@ -209,6 +209,13 @@ $table-footer-topspace: 10px;
     max-width: 100%;
     min-width: 100%;
     width: 100%;
+  }
+}
+
+.select-table, .action-table {
+
+  .actions-header th:last-child {
+    padding: 10px 0;
   }
 }
 

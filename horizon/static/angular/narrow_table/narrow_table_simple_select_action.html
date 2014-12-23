@@ -12,10 +12,10 @@
   <div class="wrapper" style="padding: 10px;">
     <div class="responsive-wrapper">
       <div class="responsive-scrollable">
-        <table class="narrow-table action-table">
+        <table class="narrow-table select-table action-table">
           <thead>
             <tr class="actions-header">
-              <th colspan="4">
+              <th colspan="5">
                 <div class="form-inline">
                   <div class="form-group">
                     <div class="input-group">
@@ -30,6 +30,7 @@
               </th>
             </tr>
             <tr>
+              <th class="multi-select-col"><input type="checkbox"/></th>
               <th>Name</th>
               <th>vCPUs</th>
               <th>RAM</th>
@@ -38,18 +39,21 @@
           </thead>
           <tbody>
             <tr>
+              <td class="multi-select-col"><input type="checkbox"/></td>
               <td>m1.small</td>
               <td>1 (28% of Quota)</td>
               <td>128 (28% of Quota)</td>
               <td><button type="button" class="btn btn-default btn-xs">Launch Instance</button></td>
             </tr>
             <tr>
+              <td class="multi-select-col"><input type="checkbox"/></td>
               <td>m1.tiny</td>
               <td>1 (28% of Quota)</td>
               <td>128 (28% of Quota)</td>
               <td><button type="button" class="btn btn-default btn-xs">Launch Instance</button></td>
             </tr>
             <tr>
+              <td class="multi-select-col"><input type="checkbox"/></td>
               <td>m1.nano</td>
               <td>1 (28% of Quota)</td>
               <td>128 (28% of Quota)</td>
@@ -58,7 +62,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <td colspan="4">
+              <td colspan="5">
                 Displaying 3 items
               </td>
             </tr>
